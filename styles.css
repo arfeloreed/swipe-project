@@ -11,6 +11,9 @@
   --bg-dirty-white: #f7f9fc;
   --btn-hover-color: #6d7a88;
 
+  /* shadows */
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+
   /* fonts */
   --body-font: "Roboto", sans-serif;
   --heading-font: "Anek Telugu", sans-serif;
@@ -208,6 +211,21 @@ p {
   padding: 0 0 0 var(--spacing-md);
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+}
+.card .icon {
+  height: 50px;
+  margin: 0 0 var(--spacing-sm);
+}
+.card h3 {
+  font-size: var(--h6-size);
+}
+
 /* navbar */
 .navbar {
   display: flex;
@@ -294,4 +312,35 @@ main {
 }
 .unified-platform .primary-btn:hover {
   background-color: var(--primary-accent);
+}
+
+/* graphic section */
+.graphic-grid {
+  display: grid;
+  grid-template-areas:
+    "card slack slack"
+    "phone slack slack"
+    "phone dash dash";
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+}
+#credit-card {
+  grid-area: card;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#slack-invoice {
+  grid-area: slack;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#phone {
+  grid-area: phone;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#dash {
+  grid-area: dash;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
 }
