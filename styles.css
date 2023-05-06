@@ -344,3 +344,34 @@ main {
   width: 100%;
   box-shadow: var(--standard-box-shadow);
 }
+
+/* integration section */
+.integration-section {
+  color: var(--bg-white);
+  background-color: var(--primary-accent);
+}
+.integration-section .primary-btn {
+  color: var(--primary-accent);
+  background-color: var(--blue-1);
+  margin: var(--spacing-md) 0 0;
+}
+.integration-section .primary-btn:hover {
+  background-color: var(--bg-white);
+}
+.integration-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+.integration-section .card .secondary-btn {
+  color: var(--blue-1);
+}
+
+#api-code {
+  max-width: 470px;
+  border-radius: 20px;
+  margin: 0 0 var(--spacing-md);
+}
+#terminal-code {
+  max-width: 470px;
+  border-radius: 20px;
+}
