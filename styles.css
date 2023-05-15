@@ -412,6 +412,16 @@ p {
   top: -32px;
   transform: skewY(-10deg);
 }
+.integration-section::after {
+  content: "";
+  background-color: var(--bg-dirty-white);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
 .integration-section .primary-btn {
   color: var(--primary-accent);
   background-color: var(--blue-1);
@@ -674,4 +684,172 @@ p {
 }
 .footer .col ul li {
   margin: var(--spacing-md) 0;
+}
+
+/* RESPONSIVENESS LAYOUTS */
+
+@media only screen and (max-width: 1144px) {
+  .section-container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  /* PARTNERS SECTION */
+  .partners-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* INTEGRATION SECTION */
+  .integration-section .col-left {
+    width: 65%;
+  }
+  .integration-section .col-right {
+    width: 35%;
+  }
+}
+
+/* Tablet size */
+@media only screen and (max-width: 768px) {
+  :root {
+    /* font-size */
+    --h1-size: 64px;
+    --h3-size: 34px;
+    /* line-height */
+    --h1-line-height: 72px;
+  }
+
+  /* UNIFIED PLATFORM SECTION */
+  .unified-platform h2 {
+    width: 100%;
+  }
+
+  /* INTEGRATION SECTION */
+  .integration-section .card-container {
+    flex-direction: column;
+  }
+  .integration-section .card-container .card {
+    width: 100%;
+  }
+
+  /* WHY SWIPE SECTION */
+  .why-swipe-section .card-container {
+    flex-wrap: wrap;
+  }
+  .why-swipe-section .card-container .card {
+    width: 50%;
+    margin: var(--spacing-md) 0;
+  }
+
+  /* GLOBAL SECTION */
+  .global-section .card-container {
+    flex-wrap: wrap;
+    margin: var(--spacing-xl) 0;
+  }
+  .global-section .card-container .card {
+    width: 50%;
+    margin: var(--spacing-md) 0;
+  }
+
+  /* VIRTUAL EVENTS SECTION */
+  .virtual-events-section .col-left {
+    padding: 0;
+  }
+
+  /* GETTING STARTED SECTION */
+  .getting-started-section .two-col {
+    align-items: center;
+  }
+  .getting-started-section .col-right {
+    flex-wrap: wrap;
+  }
+  .getting-started-section .col-right .card {
+    width: 100%;
+    margin: var(--spacing-md) 0;
+  }
+}
+
+/* Mobile size */
+@media only screen and (max-width: 568px) {
+  .two-col {
+    flex-direction: column;
+  }
+  .two-col .col-left,
+  .two-col .col-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* PARTNERS SECTION */
+  .partners-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* INTEGRATION SECTION */
+  .integration-section .col-right {
+    display: none;
+  }
+
+  /* WHY SWIPE SECTIOn */
+  .why-swipe-section .card-container .card {
+    width: 100%;
+    margin: var(--spacing-sm) 0;
+  }
+  .why-swipe-section .card-container .card .icon {
+    height: 35px;
+  }
+
+  /* GLOBAL SECTION */
+  #globe {
+    opacity: 10%;
+  }
+  .global-section .card-container .card {
+    width: 100%;
+    margin: var(--spacing-sm) 0;
+  }
+
+  /* VIRTUAL EVENTS SECTION */
+  .virtual-events-section .event-card-wrapper {
+    width: 100%;
+    height: 390px;
+  }
+  .virtual-events-section .event-card-wrapper .event-card-top {
+    height: 40%;
+  }
+  #event-card-logo {
+    width: 300px;
+  }
+  .virtual-events-section .event-card-wrapper .secondary-text {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer .section-container {
+    flex-wrap: wrap;
+  }
+  .footer .col {
+    width: 50%;
+    margin: var(--spacing-md) 0;
+  }
+  .footer .col h3 {
+    font-size: 16px;
+  }
+  .footer .col a {
+    font-size: 12px;
+  }
+  .footer .icon-link img {
+    width: 18px;
+  }
+
+  #footer-logo {
+    width: 70px;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
