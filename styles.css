@@ -15,6 +15,9 @@
   /* shadows */
   --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
 
+  /* border radius */
+  --standard-border-radius: 20px;
+
   /* gradient */
   --primary-gradient: linear-gradient(
     101.33deg,
@@ -172,7 +175,7 @@ p {
   letter-spacing: 1.25px;
   font-weight: 700;
   border: none;
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
   background-color: var(--primary-accent);
   color: var(--text-light);
   padding: var(--spacing-sm) var(--spacing-md);
@@ -360,7 +363,7 @@ p {
   background-color: var(--primary-accent);
 }
 
-/* graphic section */
+/* graphics section */
 .graphic-section {
   width: 100%;
   display: flex;
@@ -380,21 +383,23 @@ p {
   grid-area: card;
   width: 100%;
   box-shadow: var(--standard-box-shadow);
+  border-radius: var(--standard-border-radius);
 }
 #slack-invoice {
   grid-area: slack;
   width: 100%;
   box-shadow: var(--standard-box-shadow);
+  border-radius: var(--standard-border-radius);
 }
 #phone {
   grid-area: phone;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
 }
 #dash {
   grid-area: dash;
   width: 100%;
   box-shadow: var(--standard-box-shadow);
+  border-radius: var(--standard-border-radius);
 }
 
 /* integration section */
@@ -449,12 +454,12 @@ p {
 
 #api-code {
   max-width: 470px;
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
   margin: 0 0 var(--spacing-md);
 }
 #terminal-code {
   max-width: 470px;
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
 }
 
 /* Why swipe section */
@@ -558,7 +563,7 @@ p {
   width: 540px;
   height: 446px;
   box-shadow: var(--standard-box-shadow);
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
   overflow: hidden;
 }
 .event-card-wrapper .event-card-top {
@@ -755,7 +760,7 @@ p {
     width: 50px;
     height: 30px;
     background-color: rgba(250, 250, 250, 0.25);
-    border-radius: 20px;
+    border-radius: var(--standard-border-radius);
     display: flex;
     justify-content: center;
     flex-direction: column;
